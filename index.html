@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<style>
+     body{
+         background-image: linear-gradient(to left, #05000d, #1c0f63);
+     }
+</style>
+<body>
+     <div class="container flex items-center justify-center min-h-screen text-white mx-auto">
+         <div class="content flex flex-col items-center gap-6">
+             <div class="m-10"> 
+                 <h1 class="text-4xl font-semibold italic text-center ">Cronômetro Digital</h1>
+             </div>
+
+
+             <div class="text-6xl">
+                <span id="hours" class="bg-black/30 p-4 rounded-md">00</span> :
+                <span id="minutes" class="bg-black/30 p-4 rounded-md">00</span> :
+                <span id="seconds" class="bg-black/30 p-4 rounded-md">00</span>
+             </div>
+
+
+             <div class="mt-6 flex gap-4">
+                 <button id="startButton" class="w-[60px] h-[50px] bg-green-500/50 rounded-md cursor-pointer">Start</button>
+                 <button id="stopButton" class="w-[60px] h-[50px] bg-red-500/50 rounded-md cursor-pointer">Stop</button>
+                 <button id="resetButton" class="w-[60px] h-[50px] bg-blue-500/50 rounded-md cursor-pointer">Reset</button>
+             </div>
+         </div>
+     </div>
+
+
+     <script src="script.js"></script>
+</body>
+</html>
