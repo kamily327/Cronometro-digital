@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cronômetro</title>
+    <title>Cronômetro Digital</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 
-<style>
-     body{
-         background-image: linear-gradient(to left, #05000d, #1c0f63);
-     }
-</style>
-<body>
-     <div class="container flex items-center justify-center min-h-screen text-white mx-auto">
+<body> 
+     <div class="container flex items-center justify-center min-h-screen text-white mx-auto relative">
+
+        <div class="absolute top-0 right-0 ">
+
+            <button id="btnDARK" class="bg-[#1c0f40]  p-5 rounded-full w-15 h-15 flex items-center justify-center  m-5">
+                <i id="iconMode" class="bi bi-sun-fill text-orange-400 text-3xl rounded-full "></i>
+            </button>
+            
+        </div>
+
          <div class="content flex flex-col items-center gap-6">
+
              <div class="m-10"> 
-                 <h1 class="text-4xl font-semibold italic text-center ">Cronômetro Digital</h1>
+                 <h1 class="text-4xl font-semibold italic text-center uppercase">Cronômetro Digital</h1>
              </div>
 
 
@@ -31,6 +39,7 @@
                  <button id="startButton" class="w-[60px] h-[50px] bg-green-500/50 rounded-md cursor-pointer">Start</button>
                  <button id="stopButton" class="w-[60px] h-[50px] bg-red-500/50 rounded-md cursor-pointer">Stop</button>
                  <button id="resetButton" class="w-[60px] h-[50px] bg-blue-500/50 rounded-md cursor-pointer">Reset</button>
+
              </div>
          </div>
      </div>

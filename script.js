@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let minutesText = document.getElementById("minutes");
   let secondsText = document.getElementById("seconds");
   let horasText = document.getElementById("hours");
-
+  
   let segundos = 0;
   let minutos = 0;
   let horas = 0;
@@ -18,11 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
           if (segundos === 60) {
               segundos = 0;
               minutos += 1;
-            }
+            }  
             if (minutos === 60) {
                 minutos = 0;
                 horas += 1;
-            }
+            };
             
             function atualizarDisplay(){
                 let texto;
@@ -66,3 +66,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   items();
 });
+
+
+
+
+
+
+
+
+
+let btnDark = document.getElementById('btnDARK');
+let isDark = document.getElementById('iconMode');
+
+function mudarTema (){
+
+  document.body.classList.toggle('clear-mode');
+  isDark.classList.toggle('bi-moon-fill');
+  btnDark.classList.toggle('bg-[#ccc2d8]');
+  isDark.classList.toggle('bi-sun-fill');
+
+  }
+
+
+btnDark.addEventListener('click' , mudarTema);
